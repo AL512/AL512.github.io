@@ -10,6 +10,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLID", "SOLID", "{42F8C74C-A412-4414-A4F3-D18335138EF0}"
+	ProjectSection(SolutionItems) = preProject
+		SOLID\SOLID.md = SOLID\SOLID.md
+		SOLID\SRP.md = SOLID\SRP.md
+		SOLID\OCP.md = SOLID\OCP.md
+		SOLID\LSP.md = SOLID\LSP.md
+		SOLID\ISP.md = SOLID\ISP.md
+		SOLID\DIP.md = SOLID\DIP.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
