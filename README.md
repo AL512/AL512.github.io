@@ -5,7 +5,7 @@
     *   [Принцип Открытости/Закрытости (Open/Closed Principle - OCP)](/SOLID/OCP.md)
     *   [Принцип Подстановки Лисков (Liskov Substitution Principle - LSP)](/SOLID/LSP.md)
     *   [Принцип Разделения Интерфейса (Interface Segregation Principle - ISP))](/SOLID/ISP.md)
-    *   [ринцип Инверсии Зависимостей (Dependency Inversion Principle - DIP))](/SOLID/DIP.md)
+    *   [Принцип Инверсии Зависимостей (Dependency Inversion Principle - DIP))](/SOLID/DIP.md)
 
 ## Введение
 
