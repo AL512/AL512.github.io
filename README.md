@@ -1,3 +1,7 @@
+---
+layout: default
+title: Main
+---
 ## Оглавление
 
 *   [Магия Структуры в Мире C#. Мой взгляд на SOLID](/SOLID/SOLID.md)
