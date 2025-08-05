@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Main
+title: Главная страница
+nav_order: 1
 ---
 ## Оглавление
 
