@@ -175,6 +175,7 @@ public class DiscountOrder : Order
 
 ## Паттерны проектирования для соблюдения LSP
 1. Шаблонный метод (Template Method):
+
 ```csharp
 public abstract class DataProcessor
 {
@@ -198,7 +199,9 @@ public class CsvProcessor : DataProcessor
     protected override void TransformData() { /* ... */ }
 }
 ```
+
 2. Стратегия (Strategy):
+
 ```csharp
 public interface IExportStrategy
 {
@@ -219,7 +222,9 @@ private readonly IExportStrategy _exporter;
         => _exporter.Export(data);
 }
 ```
+
 3. Декоратор (Decorator):
+
 ```csharp
 public interface INotifier
 {
@@ -242,6 +247,7 @@ public class SmsDecorator : INotifier
     }
 }
 ```
+
 ## Последствия нарушения LSP
 **Методика "Тест подстановки":**
 1. **Хрупкость кода:** Изменения в подклассах ломают клиентский код.
