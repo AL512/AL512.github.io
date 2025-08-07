@@ -1,0 +1,7 @@
+main:
+  - title: Главная
+    url: /
+  - title: SOLID
+    children:
+      - title: Принцип Единственной Ответственности
+        url: /SOLID.html

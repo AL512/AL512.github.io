@@ -1,0 +1,5 @@
+remote_theme: pmarsceill/just-the-docs
+plugins:
+  - jekyll-remote-theme
+include:
+  - ".md"      # Обрабатывать все .md файлы
