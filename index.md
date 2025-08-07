@@ -1,12 +1,8 @@
-## Оглавление
-
-*   [Магия Структуры в Мире C#. Мой взгляд на SOLID](/SOLID/SOLID.md)
-    *   [Принцип Единственной Ответственности (Single Responsibility Principle - SRP)](/SOLID/SRP.md)
-    *   [Принцип Открытости/Закрытости (Open/Closed Principle - OCP)](/SOLID/OCP.md)
-    *   [Принцип Подстановки Лисков (Liskov Substitution Principle - LSP)](/SOLID/LSP.md)
-    *   [Принцип Разделения Интерфейса (Interface Segregation Principle - ISP))](/SOLID/ISP.md)
-    *   [Принцип Инверсии Зависимостей (Dependency Inversion Principle - DIP))](/SOLID/DIP.md)
-
+---
+layout: default
+title: Главная
+nav_order: 1
+---
 ## Введение
 
 Добро пожаловать в репозиторий **csharp-knowledge-base**! Здесь собраны практические статьи, заметки и примеры кода по C# и .NET, рожденные из опыта коммерческой разработки и активного менторства.
