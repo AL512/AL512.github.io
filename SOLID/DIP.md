@@ -34,6 +34,7 @@ nav_order: 5
 ## Подробные примеры реализации
 **Пример 1:** Система обработки заказов
 **Нарушение DIP:**
+
 ```csharp
 public class OrderProcessor
 {
@@ -57,7 +58,9 @@ public class OrderProcessor
 // - Жесткая привязка к SQL Server и SMTP
 // - Невозможно протестировать без реальных сервисов
 ```
+
 **Соблюдение DIP:**
+
 ```csharp
 // Абстракции
 public interface IOrderRepository
@@ -108,7 +111,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IOrderRepository, SqlOrderRepository>();
 builder.Services.AddScoped<INotificationService, EmailNotificationService>();
 ```
+
 **Пример 2:** Кэширование данных с DIP
+
 ```csharp
 // Абстракция
 public interface ICacheProvider
@@ -146,8 +151,10 @@ public class DataService
     }
 }
 ```
+
 ## Ключевые техники реализации DIP
 1. Конструкторная инъекция (наиболее распространенная)
+
 ```csharp
 public class ReportGenerator
 {
@@ -160,7 +167,9 @@ public class ReportGenerator
         => new Report(_dataProvider.GetData());
 }
 ```
+
 2. Инъекция через свойства
+
 ```csharp
 public class ApiClient
 {
@@ -173,7 +182,9 @@ public class ApiClient
     }
 }
 ```
+
 3. Инъекция через методы
+
 ```csharp
 public class ImageProcessor
 {
@@ -181,7 +192,9 @@ public class ImageProcessor
         => filter.Apply();
 }
 ```
+
 4. Контейнер внедрения зависимостей
+
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 
@@ -195,8 +208,10 @@ builder.Services.AddImplementationsOf(typeof(IDomainService));
 
 var app = builder.Build();
 ```
+
 ## Паттерны проектирования для реализации DIP
 1. Адаптер (Adapter):
+
 ```csharp
 public class LegacySystemAdapter : IModernInterface
 {
@@ -209,7 +224,9 @@ public class LegacySystemAdapter : IModernInterface
         => _legacy.OldMethod();
 }
 ```
+
 2. Фабрика (Factory):
+
 ```csharp
 public interface IServiceFactory
 {
@@ -227,7 +244,9 @@ public class DataServiceFactory : IServiceFactory
         => _provider.GetRequiredService<IDataService>();
 }
 ```
+
 3. Стратегия (Strategy):
+
 ```csharp
 public interface IPaymentStrategy
 {
@@ -245,8 +264,10 @@ public class PaymentProcessor
         => _strategy.Process(amount);
 }
 ```
+
 ## Ошибки при реализации DIP
 1. Инжектирование конкретных классов:
+
 ```csharp
 // Антипаттерн!
 public class UserService
@@ -257,7 +278,9 @@ public class UserService
         => _repository = repository;
 }
 ```
+
 2. Сервис локатор (Service Locator):
+
 ```csharp
 // Нежелательный подход
 public class OrderService
@@ -270,7 +293,9 @@ public class OrderService
     }
 }
 ```
+
 3. Чрезмерное дробление интерфейсов:
+
 ```csharp
 // Избыточное разделение
 public interface IIdGetter { int GetId(); }
@@ -283,6 +308,7 @@ public interface IBasicInfo
     string Name { get; }
 }
 ```
+
 ## Заключение
 DIP – это вершина мастерства проектирования, **ключ к истинной независимости ядра системы от изменчивых деталей**. 
 Перевернув зависимости и заставив модули общаться через абстракции, вы получаете беспрецедентную **гибкость, 
