@@ -50,6 +50,7 @@ ISP – это искусство создания интерфейсов, ко�
 
 ## Подробные примеры с решениями
 **Пример 1: Система управления устройствами (нарушение ISP)**
+
 ```csharp
 public interface IMultiFunctionDevice
 {
@@ -74,7 +75,9 @@ public class BasicPrinter : IMultiFunctionDevice
         => throw new NotImplementedException();
 }
 ```
+
 **Решение через ISP:**
+
 ```csharp
 public interface IPrinter
 {
@@ -121,8 +124,10 @@ public class PrintService
     public void Execute(Document doc) => _printer.Print(doc);
 }
 ```
+
 **Пример 2: Система управления пользователями (реальный кейс)**
 **Проблемный интерфейс:**
+
 ```csharp
 public interface IUserService
 {
@@ -136,7 +141,9 @@ public interface IUserService
     void GenerateReport(UserFilter filter);
 }
 ```
+
 **Решение через ISP:**
+
 ```csharp
 public interface IUserCRUD
 {
@@ -173,8 +180,10 @@ public class MobileAppService : IUserCRUD, IUserSecurity
     // Только CRUD + Security
 }
 ```
+
 ## Техники применения ISP
 1. Интерфейсы с реализацией по умолчанию
+
 ```csharp
 public interface IOrderProcessor
 {
@@ -194,7 +203,9 @@ public class BasicOrderProcessor : IOrderProcessor
     // Не требуется переопределять GenerateReceipt
 }
 ```
+
 2. Комбинирование интерфейсов
+
 ```csharp
 public interface ISaveable
 {
@@ -224,7 +235,9 @@ public class AutoSaver
     public void Execute() => _saveable.Save();
 }
 ```
+
 3. Адаптеры для легаси-кода
+
 ```csharp
 public class LegacySystem
 {
@@ -249,8 +262,10 @@ public class LegacyAdapter : ICommandExecutor
     }
 }
 ```
+
 ## Реальные примеры ISP
 1. IAsyncDisposable и IDisposable
+
 ```csharp
 public class ResourceManager : IAsyncDisposable, IDisposable
 {
@@ -276,7 +291,9 @@ public class AsyncClient : IAsyncDisposable
     public AsyncClient(IAsyncDisposable resource) => _resource = resource;
 }
 ```
-2. Минимальные API в ASP.NET Core
+ 
+2Минимальные API в ASP.NET Core
+
 ```csharp
 // Интерфейс с одним методом
 public interface IEndpointHandler
@@ -288,7 +305,9 @@ public interface IEndpointHandler
 app.MapGet("/api/users", new UsersHandler().Handle);
 app.MapPost("/api/orders", new OrdersHandler().Handle);
 ```
+ 
 3. System.Linq
+
 ```csharp
 public static class EnumerableExtensions
 {
@@ -298,24 +317,30 @@ public static class EnumerableExtensions
     public static IEnumerable<T> Take<T>(this IEnumerable<T> source, ...);
 }
 ```
+
 ## Практические рекомендации
 1. **Правило 5 методов:** Если интерфейс содержит >5 методов - проверьте на нарушение ISP.
 2. **Анализ клиентов:** Создавайте интерфейсы на основе потребностей клиентов.
 3. **Композиция интерфейсов:**
+
 ```csharp
 public interface IAdvancedPrinter : IPrinter, IScanner {}
 ```
+ 
 4. **Избегайте "интерфейсного загрязнения":** Не создавайте интерфейсы с единственной реализацией. 
 
 ## Ошибки при применении ISP
 **Чрезмерное разделение:**
+
 ```csharp
 // Антипаттерн: слишком мелкие интерфейсы
 public interface IIdSetter { void SetId(int id); }
 public interface IIdGetter { int GetId(); }
 public interface INameSetter { void SetName(string name); }
 ```
+
 **Решение: Группировать связанные методы**
+
 ```csharp
 public interface IIdentifiable
 {
@@ -323,8 +348,10 @@ public interface IIdentifiable
     string Name { get; set; }
 }
 ```
+
 ## Паттерны проектирования для ISP
 1. Адаптер (Adapter):
+
 ```csharp
 public class LegacyPrinterAdapter : IPrinter
 {
@@ -333,7 +360,9 @@ public class LegacyPrinterAdapter : IPrinter
     public void Print(Document doc) => _legacy.PrintDocument(doc);
 }
 ```
+
 2. Фасад (Facade):
+
 ```csharp
 public class OrderFacade : IOrderProcessing
 {
@@ -349,7 +378,9 @@ public class OrderFacade : IOrderProcessing
     }
 }
 ```
+
 3. Команда (Command):
+
 ```csharp
 public interface ICommand
 {
@@ -359,6 +390,7 @@ public interface ICommand
 public class PrintCommand : ICommand { /* ... */ }
 public class ScanCommand : ICommand { /* ... */ }
 ```
+
 ## Заключение 
 ISP освобождает ваши классы от тирании ненужных обязательств. Создавая **узкоспециализированные, клиентоориентированные 
 интерфейсы**, Вы устраняете вредные зависимости, уменьшаете связность и резко повышаете ясность кода. Классы реализуют 
