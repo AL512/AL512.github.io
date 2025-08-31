@@ -1,9 +1,10 @@
+---
 layout: default
-title: Low Coupling: Искусство независимости
+title: Low Coupling - Искусство независимости
 parent: GRASP
 nav_order: 4
 ---
-# Low Coupling: Искусство независимости
+# Low Coupling - Искусство независимости
 
 *Как проектировать связи, чтобы развод был безболезненным?*
 

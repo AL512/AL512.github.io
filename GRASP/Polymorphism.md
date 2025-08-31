@@ -1,9 +1,10 @@
+---
 layout: default
-title:  Polymorphism: Легальный полиморфизм
+title:  Polymorphism - Легальный полиморфизм
 parent: GRASP
 nav_order: 6
 ---
-#  Polymorphism: Легальный полиморфизм
+#  Polymorphism - Легальный полиморфизм
 
 *Как обрабатывать вариации без switch/case ада?*
 

@@ -1,9 +1,10 @@
+---
 layout: default
-title:  Pure Fabrication: Искусственные миры
+title:  Pure Fabrication - Искусственные миры
 parent: GRAPS
 nav_order: 7
 ---
-#  Pure Fabrication: Искусственные миры
+#  Pure Fabrication - Искусственные миры
 
 *Когда нарушать ООП догмы ради практической пользы?*
 

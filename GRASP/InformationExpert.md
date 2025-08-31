@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Information Expert: Мозг вашей системы
+title: Information Expert - Мозг вашей системы
 parent: GRASP
 nav_order: 1
 ---
-# Information Expert: Мозг вашей системы
+# Information Expert - Мозг вашей системы
 
 *Где живет логика? Почему данные должны управлять поведением?*
 

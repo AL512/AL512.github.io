@@ -1,9 +1,10 @@
+---
 layout: default
-title:  Protected Variations: Код-антихрупкость
+title:  Protected Variations - Код-антихрупкость
 parent: GRASP
 nav_order: 9
 ---
-#  Protected Variations: Код-антихрупкость
+#  Protected Variations - Код-антихрупкость
 
 *Как изолировать изменения, которые еще не случились?*
 

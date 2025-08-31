@@ -1,5 +1,6 @@
+---
 layout: default
-title:  High Cohesion: Сила фокуса
+title:  High Cohesion - Сила фокуса
 parent: GRASP
 nav_order: 5
 ---
