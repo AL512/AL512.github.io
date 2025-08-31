@@ -1,7 +1,7 @@
 layout: default
 title:  Indirection: Магия посредников
 parent: GRAPS
-nav_order: 9
+nav_order: 8
 ---
 #  Indirection: Магия посредников
 
